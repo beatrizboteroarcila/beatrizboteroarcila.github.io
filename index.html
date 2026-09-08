@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beatriz Botero Arcila — Assistant Professor of Law, Sciences Po Paris</title>
+    <meta name="description" content="Beatriz Botero Arcila is an Assistant Professor of Law at Sciences Po and a Faculty Associate at Harvard's Berkman Klein Center. Her work is on AI liability, data governance, and digital regulation.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ========== Artsy white — editorial studio variant ========== */
+        :root {
+            --paper: #FFFFFF;
+            --ink: #17140F;
+            --muted: #6A645C;
+            --faint: #A49E95;
+            --line: #E9E6DF;
+            --accent: #9C1B31;
+            --serif: 'Playfair Display', Georgia, serif;
+            --sans: 'Inter', system-ui, sans-serif;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+        body {
+            font-family: var(--sans); color: var(--ink); background: var(--paper);
+            font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased;
+            font-feature-settings: "liga" 1, "calt" 1;
+        }
+        ::selection { background: var(--ink); color: var(--paper); }
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+        :focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; }
+
+        .wrap { max-width: 1120px; margin: 0 auto; padding: 0 2.5rem; }
+
+        /* ---------- Top bar ---------- */
+        .top {
+            position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.86);
+            backdrop-filter: blur(8px); border-bottom: 1px solid var(--line);
+        }
+        .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+        .top .sig { font-family: var(--serif); font-size: 1.15rem; letter-spacing: 0.01em; }
+        .top nav { display: flex; gap: 1.6rem; }
+        .top nav a {
+            font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em;
+            color: var(--muted); transition: color 0.2s;
+        }
+        .top nav a:hover { color: var(--ink); }
+        @media (max-width: 720px) { .top nav { display: none; } }
+
+        /* ---------- Hero ---------- */
+        .hero { padding: 7rem 0 5.5rem; }
+        .eyebrow {
+            font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.18em;
+            color: var(--muted); margin-bottom: 1.6rem;
+        }
+        .hero h1 {
+            font-family: var(--serif); font-weight: 500;
+            font-size: clamp(3.2rem, 9vw, 6.4rem); line-height: 0.98; letter-spacing: -0.015em;
+        }
+        .hero .statement {
+            font-family: var(--serif); font-style: italic;
+            font-size: clamp(1.35rem, 3.2vw, 2.1rem); line-height: 1.3; color: var(--muted);
+            margin-top: 1.6rem; max-width: 24ch;
+        }
+        .hero .links { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 2.5rem; }
+        .hero .links a {
+            font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em;
+            color: var(--muted); padding-bottom: 3px; border-bottom: 1px solid var(--line);
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .hero .links a:hover { color: var(--ink); border-color: var(--ink); }
+
+        /* ---------- Section shell ---------- */
+        .sec { border-top: 1px solid var(--line); padding: 3.6rem 0; }
+        .sec-grid { display: grid; grid-template-columns: 190px 1fr; gap: 3rem; }
+        .sec-label {
+            font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--muted);
+            display: flex; gap: 0.7rem; align-items: baseline; height: fit-content;
+        }
+        .sec-label .n { font-family: var(--serif); font-size: 1.1rem; color: var(--accent); letter-spacing: 0; }
+        .sec-body { min-width: 0; }
+
+        /* ---------- About ---------- */
+        .about {
+            font-family: var(--serif); font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 1.95rem);
+            line-height: 1.35; color: var(--ink);
+        }
+        .about .hl { color: var(--accent); }
+        .about p + p { margin-top: 1.1rem; }
+        .fields { margin-top: 2rem; font-size: 0.9rem; color: var(--muted); line-height: 1.9; }
+        .fields b { color: var(--ink); font-weight: 500; }
+
+        /* ---------- Editorial lists ---------- */
+        .item { padding: 1.5rem 0; border-top: 1px solid var(--line); }
+        .item:first-child { border-top: none; padding-top: 0; }
+        .kicker {
+            font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.13em; color: var(--muted);
+        }
+        .kicker.flag { color: var(--accent); }
+        .title {
+            font-family: var(--serif); font-weight: 500; font-size: 1.5rem; line-height: 1.25; margin-top: 0.35rem;
+        }
+        .title.sm { font-size: 1.25rem; }
+        .sub { font-size: 0.92rem; color: var(--muted); margin-top: 0.3rem; }
+        .sub a { border-bottom: 1px solid var(--line); }
+        .sub a:hover { border-color: var(--ink); }
+        .note { font-size: 0.9rem; color: var(--muted); line-height: 1.6; margin-top: 0.5rem; }
+        .note a { color: var(--accent); border-bottom: 1px solid rgba(156,27,49,0.3); }
+        .who b { color: var(--ink); font-weight: 500; }
+        .yr { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); }
+
+        .two { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 2.5rem; }
+        .two .item { border-top: none; padding: 0; }
+
+        .lead { font-size: 1rem; color: var(--muted); line-height: 1.7; margin-bottom: 2rem; max-width: 60ch; }
+
+        .subhead {
+            font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--muted);
+            margin: 2.5rem 0 1.1rem;
+        }
+        .more { font-size: 0.9rem; color: var(--muted); margin-top: 1.6rem; }
+        .more a { color: var(--accent); border-bottom: 1px solid rgba(156,27,49,0.3); }
+
+        /* ---------- Contact ---------- */
+        .contact { border-top: 1px solid var(--line); padding: 4rem 0 5rem; }
+        .contact .big {
+            font-family: var(--serif); font-weight: 500; font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.05;
+        }
+        .contact .big a { border-bottom: 1px solid var(--line); transition: border-color 0.2s; }
+        .contact .big a:hover { border-color: var(--ink); }
+        .foot { font-size: 0.78rem; color: var(--faint); margin-top: 2.5rem; }
+
+        /* ---------- Motion ---------- */
+        .fade { opacity: 0; transform: translateY(12px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .fade.vis { opacity: 1; transform: none; }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 720px) {
+            .wrap { padding: 0 1.5rem; }
+            .sec-grid { grid-template-columns: 1fr; gap: 1.4rem; }
+            .two { grid-template-columns: 1fr; }
+            .hero { padding: 4.5rem 0 4rem; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .fade { opacity: 1; transform: none; transition: none; }
+            html { scroll-behavior: auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top">
+        <div class="wrap">
+            <span class="sig">Beatriz Botero Arcila</span>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#work">Consulting</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="eyebrow">Assistant Professor of Law · Sciences Po Paris</div>
+            <h1>Beatriz<br>Botero Arcila</h1>
+            <p class="statement">AI liability, data governance, and digital regulation.</p>
+            <div class="links">
+                <a class="email-link" href="#">Email</a>
+                <a href="https://www.linkedin.com/in/beatriz-botero-arcila/" target="_blank">LinkedIn</a>
+                <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2452399" target="_blank">SSRN</a>
+                <a href="CV.pdf" target="_blank">CV</a>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="sec fade" id="about">
+            <div class="sec-grid">
+                <div class="sec-label"><span class="n">01</span> About</div>
+                <div class="sec-body">
+                    <div class="about">
+                        <p>I'm an Assistant Professor of Law at <span class="hl">Sciences Po Paris</span> and a Faculty Associate at <span class="hl">Harvard</span>'s Berkman Klein Center for Internet &amp; Society.</p>
+                        <p>My work is on <span class="hl">AI liability</span>, <span class="hl">data governance</span>, and the legal and policy enablers of the <span class="hl">digital transformation</span>, spanning the European Union, the United States, and Latin America.</p>
+                    </div>
+                    <div class="fields">
+                        <b>Data governance &amp; privacy</b> · <b>AI liability &amp; regulation</b> · <b>AI diffusion &amp; development</b> · EU digital regulation · Smart cities &amp; urban tech · Platform &amp; internet governance · Latin America tech policy
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research -->
+        <section class="sec fade" id="research">
+            <div class="sec-grid">
+                <div class="sec-label"><span class="n">02</span> Select research</div>
+                <div class="sec-body">
+                    <div class="item">
+                        <div class="kicker flag">Work in progress</div>
+                        <div class="title">Taking AI Complexity Seriously and the Challenge for Liability Law: The Case of AI Companions in the United States</div>
+                    </div>
+                    <div class="item">
+                        <div class="kicker">2025 · Journal of Tort Law</div>
+                        <div class="title">AI Liability Along the Value Chain: Lessons from the Liability of Suppliers of Components in Product Liability Law</div>
+                    </div>
+                    <div class="item">
+                        <div class="kicker">2024 · Michigan State Law Review</div>
+                        <div class="title">Future-Proofing Transparency: Re-Thinking Public Record Governance for the Age of Big Data</div>
+                        <div class="sub">Future of Privacy Forum — Privacy Papers for Policymakers Award, 2024</div>
+                    </div>
+                    <div class="item">
+                        <div class="kicker">2023 · Journal of Free Speech Law</div>
+                        <div class="title">Is It a Platform? Is It a Search Engine? It's ChatGPT! The European Liability Regime for Large Language Models</div>
+                    </div>
+                    <p class="more">Full list on <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2452399" target="_blank">SSRN</a> and in my <a href="CV.pdf" target="_blank">CV</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teaching -->
+        <section class="sec fade" id="teaching">
+            <div class="sec-grid">
+                <div class="sec-label"><span class="n">03</span> Select teaching</div>
+                <div class="sec-body two">
+                    <div class="item"><div class="title sm">AI and Data Law</div><div class="sub">Sciences Po Law School</div></div>
+                    <div class="item"><div class="title sm">Law and Technological Diffusion</div><div class="sub">Tel Aviv University</div></div>
+                    <div class="item"><div class="title sm">Comparative Digital Surveillance Law</div><div class="sub">Université Paris-Panthéon-Assas (invited)</div></div>
+                    <div class="item"><div class="title sm">Topics in Cyberlaw</div><div class="sub">Sciences Po Law School</div></div>
+                    <div class="item"><div class="title sm">Thinking Like a Lawyer</div><div class="sub">Sciences Po College, Reims</div></div>
+                    <div class="item"><div class="title sm">Feminist Legal Theory</div><div class="sub">Sciences Po Law School</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consulting -->
+        <section class="sec fade" id="work">
+            <div class="sec-grid">
+                <div class="sec-label"><span class="n">04</span> Consulting &amp; commissioned research</div>
+                <div class="sec-body">
+                    <p class="lead">As a consultant, I draw on my research to help organizations navigate complex, fast-moving problems in AI liability, data governance, and digital regulation.</p>
+
+                    <div class="item">
+                        <div class="yr">2026</div>
+                        <div class="title sm">Consultant — AI liability and insurance</div>
+                        <div class="sub who"><b>HITS (House of InsurTech Switzerland)</b></div>
+                        <div class="note">Generali's InsurTech innovation hub and corporate-startup studio. Research and advisory support on AI liability and its implications for insurance.</div>
+                    </div>
+                    <div class="item">
+                        <div class="yr">2026</div>
+                        <div class="title sm">Domain expert — AI regulation</div>
+                        <div class="sub who"><b>Nalanda Analytica</b></div>
+                        <div class="note">Developing a specialized Regulatory Impact Analysis (RIA) methodology for AI regulation across Latin America and the Caribbean for the Digital Hub Association and CAF (Corporación Andina de Fomento), to be validated through a regional pilot.</div>
+                    </div>
+                    <div class="item">
+                        <div class="yr">2023 – 2026</div>
+                        <div class="title sm">Consultant — Data &amp; Digital Governance</div>
+                        <div class="sub who"><b>The World Bank</b></div>
+                        <div class="note">Ongoing advisory on data and digital governance for client governments — including co-developing a <a href="https://documents1.worldbank.org/curated/en/099052626191046057/pdf/P505552-983021ed-9e25-4541-983a-1ce02e73d528.pdf" target="_blank">cloud regulation assessment tool</a> to enable cloud adoption and market development, and work on modernizing data-consent frameworks (forthcoming 2026).</div>
+                    </div>
+                    <div class="item">
+                        <div class="yr">2022, 2025</div>
+                        <div class="title sm">Commissioned research — AI liability &amp; data governance</div>
+                        <div class="sub who"><b>Mozilla Foundation</b></div>
+                        <div class="note">Reports on <a href="https://blog.mozilla.org/netpolicy/2025/04/01/new-mozilla-research-civil-liability-along-the-ai-value-chain/" target="_blank">civil liability along the AI value chain</a> and a practical <a href="https://www.mozillafoundation.org/en/research/library/is-that-even-legal/usa/" target="_blank">data-governance guide for technology builders in the United States</a>.</div>
+                    </div>
+                    <div class="item">
+                        <div class="yr">2023</div>
+                        <div class="title sm">Commissioned study — social media &amp; fundamental rights</div>
+                        <div class="sub who"><b>European Parliament</b> — Policy Department for Citizens' Rights &amp; Constitutional Affairs (for the LIBE Committee)</div>
+                        <div class="note"><a href="https://www.europarl.europa.eu/thinktank/en/document/IPOL_STU(2023)743400" target="_blank">Social media platforms and challenges for democracy, rule of law and fundamental rights</a> — assessing how major platforms and online-content governance affect democracy, the rule of law, and fundamental rights.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advisory -->
+        <section class="sec fade" id="advisory">
+            <div class="sec-grid">
+                <div class="sec-label"><span class="n">05</span> Advisory</div>
+                <div class="sec-body two">
+                    <div class="item"><div class="yr">2024 –</div><div class="title sm">Law &amp; Policy Strategy Group</div><div class="sub">Int'l Panel on the Information Environment (IPIE)</div></div>
+                    <div class="item"><div class="yr">2024 –</div><div class="title sm">Advisory Board</div><div class="sub">EPFL EssentialTech Centre</div></div>
+                    <div class="item"><div class="yr">2025 –</div><div class="title sm">Advisory Board</div><div class="sub">Brussels Privacy Hub</div></div>
+                    <div class="item"><div class="yr">2025</div><div class="title sm">AI Liability Task Force</div><div class="sub">Centre for European Policy Studies (CEPS)</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="sec fade" id="projects">
+            <div class="sec-grid">
+                <div class="sec-label"><span class="n">06</span> Other projects</div>
+                <div class="sec-body">
+                    <div class="item">
+                        <div class="yr">In progress</div>
+                        <div class="title sm">European AI Liability Cases Database</div>
+                        <div class="sub">With the Digital Justice Clinic, Sciences Po Law School</div>
+                        <div class="note">An open-access database tracking AI liability cases across EU jurisdictions by sector, harm type, legal framework, and outcome — to my knowledge, the first of its kind for Europe. A working prototype is available to view on request.</div>
+                    </div>
+                    <div class="item">
+                        <div class="yr">2021 – 2026</div>
+                        <div class="title sm">Co-founder — <a href="https://www.edgelands.institute/" target="_blank" style="border-bottom:1px solid var(--line);">Edgelands Institute</a></div>
+                        <div class="sub">Medellín / Geneva / Nairobi</div>
+                        <div class="note">Director of Operations and Research, 2021–2024. The Edgelands Institute was a "pop-up" interdisciplinary initiative examining how the digitization of security transforms coexistence in different cities around the world.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="sec fade" id="experience">
+            <div class="sec-grid">
+                <div class="sec-label"><span class="n">07</span> Experience</div>
+                <div class="sec-body">
+                    <div class="item"><div class="yr">2021 –</div><div class="title sm">Assistant Professor of Law</div><div class="sub">Sciences Po (FNSP), Paris</div></div>
+                    <div class="item"><div class="yr">2019 –</div><div class="title sm">Faculty Associate</div><div class="sub">Berkman Klein Center for Internet &amp; Society, Harvard University</div></div>
+                    <div class="item"><div class="yr">Fall 2025</div><div class="title sm">Visiting Professor of Law</div><div class="sub">Tel Aviv University</div></div>
+                    <div class="item"><div class="yr">2024 – 2025</div><div class="title sm">Fellow — International Strategy Forum</div><div class="sub">Schmidt Futures</div></div>
+                    <div class="item"><div class="yr">2018 – 2020</div><div class="title sm">Head of Legal</div><div class="sub">Tpaga (Y Combinator 2015), Bogotá</div></div>
+
+                    <h3 class="subhead">Education</h3>
+                    <div class="item"><div class="title sm">S.J.D. — Harvard Law School</div><div class="sub">2021 · Dissertation: City Power in the Digital Age</div></div>
+                    <div class="item"><div class="title sm">LL.M. — Harvard Law School</div><div class="sub">2016 · Honors in thesis</div></div>
+                    <div class="item"><div class="title sm">LL.B. — Universidad de los Andes</div><div class="sub">2015 · Top 6% of class</div></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="wrap">
+            <div class="sec-label" style="margin-bottom:1.5rem;"><span class="n">08</span> Contact</div>
+            <div class="big">For inquiries —<br><a class="email-link email-text" href="#">bboteroa (at) gmail.com</a></div>
+            <p class="foot">© 2025 Beatriz Botero Arcila · Sciences Po, Paris</p>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            var addr = 'bboteroa' + '@' + 'gmail.com';
+            document.querySelectorAll('.email-link').forEach(function (el) {
+                el.setAttribute('href', 'mailto:' + addr);
+                if (el.classList.contains('email-text')) el.textContent = addr;
+            });
+        })();
+        var io = new IntersectionObserver(function (es) {
+            es.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('vis'); });
+        }, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
+        document.querySelectorAll('.fade').forEach(function (el) { io.observe(el); });
+    </script>
+</body>
+</html>
